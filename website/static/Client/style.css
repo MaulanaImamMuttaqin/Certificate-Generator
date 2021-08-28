@@ -1,3 +1,69 @@
-h1 {
+@font-face {
+  font-family: roboto;
+  src: url("../assets/fonts/Roboto-Light.ttf");
+}
+
+body,
+html,
+.container {
+  margin: 0;
+  height: 100%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  flex-direction: column;
+}
+body {
+  flex-direction: column;
+  font-family: roboto;
+}
+.input {
+  width: 500px;
+  height: 35px;
+  border-radius: 50px;
+  border: 1px solid grey;
+  margin-bottom: 10px;
+  outline: none;
+  padding-left: 20px;
+  font-size: 15px;
+}
+.button {
+  border: 1px solid;
+  border-radius: 50px;
+  height: 40px;
+  width: 120px;
+  background-color: rgb(53, 62, 187);
+  color: white;
+  font-weight: bolder;
+  transition: background-color 0.3s ease, font-size 0.2s ease;
+  font-size: 15px;
+}
+
+.button:hover {
+  font-size: 16px;
+  background-color: rgb(39, 46, 141);
+  cursor: pointer;
+}
+.button:active {
+  font-size: 15px;
+  background-color: rgb(51, 60, 189);
+}
+#loading {
+  margin: 10px;
+}
+#message {
+  margin: 5px;
+}
+.hidden {
+  display: none;
+}
+#download {
   color: blue;
+  text-decoration: underline;
+  cursor: pointer;
 }

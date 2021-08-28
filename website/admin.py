@@ -5,4 +5,4 @@ admin = Blueprint('admin', __name__)
 
 @admin.route('/Home', methods=['GET', 'POST'])
 def home():
-    return render_template("Admin/admin.html")
+    return render_template("Admin/index.html")
