@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, jsonify, send_file
 import json
 import os
-
+from .certificate import put_name, template_path, save_img_path, save_pdf_path
 client = Blueprint('client', __name__)
 
 
@@ -16,8 +16,10 @@ def verify():
     name = data["name"].lower()
     print(name)
     if verify_list(name):
+        put_name(template_path, save_img_path,
+                 save_pdf_path, name.title(), (283, 365))
         res = {"txt": "Anda terverifikasi silahkan download ",
-               "filename": name.title().replace(" ", "_") + ".pdf",
+               "filename": name.title() + ".pdf",
                "verify": True
                }
     else:
